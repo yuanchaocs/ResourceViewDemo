@@ -9,6 +9,7 @@ import android.widget.ListView;
 import com.feicuiedu.resourceviewdemo.demoa.DemoAActivity;
 import com.feicuiedu.resourceviewdemo.demob.DemoBActivity;
 import com.feicuiedu.resourceviewdemo.democ.DemoCActivity;
+import com.feicuiedu.resourceviewdemo.demod.DemoDActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        String[] datas = {"RecyclerView基本运用", "下拉刷新","上拉加载"};
+        String[] datas = {
+                "RecyclerView基本运用",
+                "下拉刷新",
+                "上拉加载",
+                "视图封装"};
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datas);
         listView.setAdapter(arrayAdapter);
     }
@@ -38,15 +43,23 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = null;
         switch (position) {
             case 0:
+                // "RecyclerView基本运用",
                 intent = new Intent(this, DemoAActivity.class);
                 startActivity(intent);
                 break;
             case 1:
+                // "下拉刷新",
                 intent = new Intent(this, DemoBActivity.class);
                 startActivity(intent);
                 break;
             case 2:
+                // "上拉加载",
                 intent = new Intent(this, DemoCActivity.class);
+                startActivity(intent);
+                break;
+            case 3:
+                // "视图封装"
+                intent = new Intent(this, DemoDActivity.class);
                 startActivity(intent);
                 break;
             default:
