@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".demob.DemoBActivity">
         </activity>
+        <activity android:name=".democ.DemoCActivity">
+        </activity>
     </application>
 
 </manifest>
